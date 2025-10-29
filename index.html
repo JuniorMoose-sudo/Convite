@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite - Juraci & Maria Karollynne</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-content">
+      <div class="ring"></div>
+      <h2>J & K</h2>
+      <p>Carregando nosso momento especial...</p>
+    </div>
+  </div>
+
+  <div class="envelope" id="envelope" role="button" aria-label="Abrir convite de casamento">
+    <div class="envelope-left">
+      <h1>J</h1>
+    </div>
+    <div class="envelope-right">
+      <h1>K</h1>
+    </div>
+  </div>
+
+  <div class="convite" id="convite" aria-hidden="true" aria-label="Convite interno">
+    <img src="assets/convite.png" alt="Convite de Casamento" class="convite-img">
+    <a href="#" id="confirmar" class="btn btn-primary">Confirmar Presença 💌</a>
+    <a href="https://lista-presente-divertida.onrender.com" target="_blank" class="btn btn-secondary fade-in-glow">
+      Acesse nossa Lista de Presentes 🎁
+    </a>
+    
+    <!-- Controle de Música -->
+    <div class="music-controls">
+      <button id="musicToggle" class="btn-music">🎵</button>
+    </div>
+  </div>
+
+  <!-- Áudio para música de fundo -->
+  <audio id="bgMusic" loop>
+    <source src="assets/musica-romantica.mp3" type="audio/mpeg">
+    <source src="assets/musica-romantica.ogg" type="audio/ogg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
