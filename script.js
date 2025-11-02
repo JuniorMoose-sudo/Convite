@@ -81,3 +81,26 @@ document.getElementById("confirmar").addEventListener("click", (e) => {
 document.querySelector('.convite-img').addEventListener('dragstart', (e) => {
   e.preventDefault();
 });
+
+// Parar música ao sair da página
+window.addEventListener('beforeunload', () => {
+  bgMusic.pause();
+  bgMusic.currentTime = 0;
+});
+
+// Parar música ao clicar em qualquer link
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+  });
+});
+
+// (Opcional) Pausar música ao trocar de aba
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    bgMusic.pause();
+  } else if (isMusicPlaying) {
+    bgMusic.play();
+  }
+});
