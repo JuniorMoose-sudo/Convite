@@ -27,17 +27,84 @@
     </div>
   </div>
 
-  <div class="convite" id="convite" aria-hidden="true" aria-label="Convite interno">
-    <img src="assets/convite.png" alt="Convite de Casamento" class="convite-img">
-    <a href="https://lista-presente-divertida.onrender.com" target="_blank" class="btn btn-secondary fade-in-glow">
-      Acesse nossa Lista de Presentes 🎁
-    <a href="#" id="confirmar" class="btn btn-primary">Confirmar Presença 💌</a>
-    </a>
+  <!-- Container principal com scroll -->
+  <div class="main-container" id="mainContainer">
     
-    <!-- Controle de Música -->
-    <div class="music-controls">
-      <button id="musicToggle" class="btn-music">🎵</button>
-    </div>
+    <!-- Seção de Informações do Casamento -->
+    <section class="wedding-info" id="weddingInfo">
+      <div class="container">
+        <!-- Cabeçalho -->
+        <div class="info-header text-center mb-5">
+          <h1 class="couple-names">Juraci & Maria Karollynne</h1>
+          <p class="wedding-date">24 de Janeiro de 2026</p>
+          <div class="divider"></div>
+        </div>
+
+        <!-- Informações principais -->
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            
+            <!-- Horário e Local -->
+            <div class="info-card">
+              <div class="info-icon">⏰</div>
+              <h3>Horário & Local</h3>
+              <p class="info-detail">15:30 Horas</p>
+              <p class="info-location">Local: Comuidade Jesus de Nazaré</p>
+            </div>
+
+            <!-- Dress Code -->
+            <div class="info-card">
+              <div class="info-icon">👔</div>
+              <h3>Codigo de vestimenta</h3>
+              <p class="info-detail">Traje: Social</p>
+              <div class="color-palette">
+                <div class="color-swatch" style="background-color: #ff6b6b;" title="Vermelho Romântico"></div>
+              </div>
+              <p class="color-note">Sugerimos essas cores para harmonizar com nossa celebração</p>
+            </div>
+
+            <!-- Informações Adicionais -->
+            <div class="info-card">
+              <div class="info-icon">💫</div>
+              <h3>Informações Importantes</h3>
+              <ul class="info-list">
+                <li>Havera uma recepção após a cerimonia, mediante a confirmação da contribuição realizada no site abaixo.</li>
+                <li>Lista de presentes online</li>
+                <li>Confirmar presença até 05/01/2026</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+          <p>Role para ver o convite</p>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Convite (agora com scroll) -->
+    <section class="invitation-section" id="invitationSection">
+      <div class="convite" id="convite" aria-hidden="true" aria-label="Convite interno">
+        <img src="assets/convite.png" alt="Convite de Casamento" class="convite-img">
+        
+        <!-- LISTA DE PRESENTES -->
+        <a href="https://lista-presente-divertida.onrender.com" target="_blank" class="btn btn-secondary fade-in-glow">
+          Acesse nossa Lista de Presentes 🎁
+        </a>
+        
+        <!-- CONFIRMAÇÃO DE PRESENÇA -->
+        <a href="#" id="confirmar" class="btn btn-primary">Confirmar Presença 💌</a>
+        
+        <!-- Controle de Música -->
+        <div class="music-controls">
+          <button id="musicToggle" class="btn-music">🎵</button>
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- Áudio para música de fundo -->
