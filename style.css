@@ -18,6 +18,249 @@ body {
   padding: 0;
 }
 
+/* ===== CONTAINER PRINCIPAL COM SCROLL ===== */
+.main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+  z-index: 4;
+}
+
+.main-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== SEÇÃO DE INFORMAÇÕES ===== */
+.wedding-info {
+  padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e8e8e8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.info-header {
+  margin-bottom: 50px;
+}
+
+.couple-names {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+}
+
+.wedding-date {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: #4ecdc4;
+  font-weight: 300;
+}
+
+.divider {
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* ===== CARDS DE INFORMAÇÃO ===== */
+.info-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #e8e8e8;
+  text-align: center;
+}
+
+.info-detail {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.info-location {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #e8e8e8;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* ===== PALETA DE CORES ===== */
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.2);
+}
+
+.color-note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  color: #e8e8e8;
+  text-align: center;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* ===== LISTA DE INFORMAÇÕES ===== */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-list li {
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 0;
+  color: #e8e8e8;
+  position: relative;
+  padding-left: 25px;
+}
+
+.info-list li::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ===== INDICADOR DE SCROLL ===== */
+.scroll-indicator {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.7;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.scroll-indicator p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #e8e8e8;
+}
+
+.scroll-arrow {
+  font-size: 1.5rem;
+  color: #4ecdc4;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* ===== SEÇÃO DO CONVITE ===== */
+.invitation-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0b1b3c 0%, #1a2d5a 100%);
+  padding: 40px 20px;
+}
+
+/* Ajuste do convite para a nova seção */
+.invitation-section .convite {
+  position: relative;
+  transform: none;
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .wedding-info {
+    padding: 60px 15px 40px;
+  }
+  
+  .couple-names {
+    font-size: 2.2rem;
+  }
+  
+  .info-card {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .color-palette {
+    gap: 10px;
+  }
+  
+  .color-swatch {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .couple-names {
+    font-size: 1.8rem;
+  }
+  
+  .wedding-date {
+    font-size: 1.1rem;
+  }
+  
+  .info-card {
+    padding: 15px;
+  }
+  
+  .info-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
 /* ===== LOADING SCREEN ===== */
 .loading-screen {
   position: fixed;
