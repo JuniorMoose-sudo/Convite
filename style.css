@@ -728,3 +728,60 @@ body {
     max-width: 320px;
   }
 }
+
+/* ===== BOTÃO CTA (CALL-TO-ACTION) ===== */
+.btn-cta {
+  display: block;
+  width: 100%;
+  padding: 18px 25px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  background-size: 200% 200%;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 107, 107, 0.4);
+  animation: cta-attention 4s ease-in-out infinite;
+}
+
+.btn-cta:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4), 0 0 25px rgba(78, 205, 196, 0.6);
+}
+
+@keyframes cta-attention {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 107, 107, 0.4);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), 0 0 20px rgba(78, 205, 196, 0.5);
+  }
+  100% {
+  	background-position: 0% 50%;
+    transform: scale(1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 107, 107, 0.4);
+  }
+}
+
+.btn-cta span {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  display: inline-block; /* Allows transform */
+  transition: transform 0.3s ease;
+}
+
+.btn-cta:hover span {
+    transform: rotate(15deg);
+}
